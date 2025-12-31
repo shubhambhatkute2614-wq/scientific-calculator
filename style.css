@@ -1,0 +1,103 @@
+:root {
+    --bg: #121212;
+    --calc: #1f1f1f;
+    --btn: #444;
+    --text: #ffffff;
+}
+
+.light {
+    --bg: #f4f4f4;
+    --calc: #ffffff;
+    --btn: #dddddd;
+    --text: #000000;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
+
+.app {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.calculator {
+    background: var(--calc);
+    padding: 15px;
+    border-radius: 10px;
+    width: 360px;
+}
+
+#display {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+button {
+    height: 40px;
+    background: var(--btn);
+    color: var(--text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.operator {
+    background: orange;
+    color: black;
+}
+
+.clear {
+    background: red;
+}
+
+.history {
+    background: var(--calc);
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+    font-size: 14px;
+}
+
+.history-clear {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 8px;
+    background: crimson;
+    color: white;
+    border-radius: 5px;
+}
+
+.converter {
+    background: var(--calc);
+    padding: 12px;
+    border-radius: 10px;
+    width: 360px;
+    margin: 20px auto;
+}
+
+.converter input,
+.converter select,
+.converter button {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 6px;
+}

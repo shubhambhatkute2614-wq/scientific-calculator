@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+    <!-- Calculator -->
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+
+        <!-- Scientific buttons -->
+        <div class="buttons scientific">
+            <button onclick="sin()">sin</button>
+            <button onclick="cos()">cos</button>
+            <button onclick="tan()">tan</button>
+            <button onclick="toggleDegRad()">DEG/RAD</button>
+
+            <button onclick="asin()">sin⁻¹</button>
+            <button onclick="acos()">cos⁻¹</button>
+            <button onclick="atan()">tan⁻¹</button>
+            <button onclick="sqrt()">√</button>
+
+            <button onclick="square()">x²</button>
+            <button onclick="cube()">x³</button>
+            <button onclick="reciprocal()">1/x</button>
+            <button onclick="factorial()">n!</button>
+
+            <button onclick="power()">xʸ</button>
+            <button onclick="log10()">log</button>
+            <button onclick="ln()">ln</button>
+            <button onclick="exp()">eˣ</button>
+        </div>
+
+        <!-- Main calculator -->
+        <div class="buttons main">
+            <button class="clear" onclick="clearDisplay()">C</button>
+            <button onclick="backspace()">⌫</button>
+            <button onclick="appendValue('(')">(</button>
+            <button onclick="appendValue(')')">)</button>
+
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button class="operator" onclick="appendValue('/')">÷</button>
+
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button class="operator" onclick="appendValue('*')">×</button>
+
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button class="operator" onclick="appendValue('-')">−</button>
+
+            <button onclick="appendValue('0')">0</button>
+            <button onclick="appendValue('.')">.</button>
+            <button class="operator" onclick="appendValue('+')">+</button>
+            <button class="operator" onclick="calculate()">=</button>
+        </div>
+
+        <!-- Memory & Theme -->
+        <div class="buttons extra">
+            <button onclick="memoryClear()">MC</button>
+            <button onclick="memoryRecall()">MR</button>
+            <button onclick="memoryAdd()">M+</button>
+            <button onclick="memorySub()">M−</button>
+            <button onclick="toggleTheme()">🌙</button>
+        </div>
+    </div>
+
+    <!-- History panel -->
+    <div class="history">
+        <h3>History</h3>
+        <button class="history-clear" onclick="clearHistory()">Clear History</button>
+        <ul id="historyList"></ul>
+    </div>
+</div>
+
+<!-- Number System Converter -->
+<div class="converter">
+    <h3>Number System Converter</h3>
+
+    <input type="text" id="numInput" placeholder="Enter number">
+
+    <select id="fromBase">
+        <option value="10">Decimal</option>
+        <option value="2">Binary</option>
+        <option value="8">Octal</option>
+        <option value="16">Hexadecimal</option>
+    </select>
+
+    <select id="toBase">
+        <option value="2">Binary</option>
+        <option value="8">Octal</option>
+        <option value="10">Decimal</option>
+        <option value="16">Hexadecimal</option>
+    </select>
+
+    <button onclick="convertNumber()">Convert</button>
+    <p id="convertResult"></p>
+</div>
+
+<script src="script.js"></script>
+<script src="keyboard.js"></script>
+
+</body>
+</html>
